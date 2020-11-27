@@ -21,6 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     SitePartsModule,
+    
     TranslateModule.forRoot({
       defaultLanguage:Lang.ar,
         loader: {

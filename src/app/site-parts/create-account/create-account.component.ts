@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApisService } from 'src/Core/services/apis.service';
 
 @Component({
   selector: 'app-create-account',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:ApisService){
+    // console.log(this.api.text);
+   }
 
   ngOnInit(): void {
   }
