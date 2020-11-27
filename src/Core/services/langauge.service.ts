@@ -13,8 +13,8 @@ export class LangaugeService {
     translate.setDefaultLang(this.translate.currentLang);
     translate.use(this.translate.currentLang);
   }
-  currentDir:string=Dir.rtl;
-  currentLang:string = Lang.ar;
+  currentDir:string=localStorage.getItem('Dir') || Dir.rtl;
+  currentLang:string = localStorage.getItem('Lang') || Lang.ar;
   private setLang(lang:Lang){
     if(lang == Lang.ar) {
       this.currentDir = Dir.rtl;

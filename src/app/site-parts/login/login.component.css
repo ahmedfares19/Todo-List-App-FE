@@ -1,0 +1,15 @@
+.login_comp{
+    margin: 0 auto;
+    width: 400px;
+   padding: 30px;
+  
+   border-radius: 10px;
+   background-color: #16213e;
+}
+label{
+    color: #ffffff;
+}
+.login_comp h1 {
+    text-align: center;
+    color: #ffffff;
+}

@@ -7,6 +7,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'; 
 import { Lang } from 'src/Core/enums/languages';
+import { SitePartsModule } from './site-parts/site-parts.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -18,6 +20,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    SitePartsModule,
     TranslateModule.forRoot({
       defaultLanguage:Lang.ar,
         loader: {
@@ -25,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
         }
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

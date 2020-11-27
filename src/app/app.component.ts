@@ -15,18 +15,8 @@ export class AppComponent {
   constructor(public langaugeService:LangaugeService,public translate:TranslateService,private render:Renderer2){
     
   }
-  bo=false
+isLogin=true
  changeLang(){
-   this.langaugeService.changeLang()
-
-
-   if(this.bo){
-    this.render.setAttribute(document.body,'theme','dark')
-    this.bo = ! this.bo
-   } else {
-    this.render.setAttribute(document.body,'theme','light')
-    this.bo = ! this.bo
-   }
-   
+   this.langaugeService.changeLang()   
  }
 }
